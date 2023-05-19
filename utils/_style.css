@@ -1,0 +1,22 @@
+._profile {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+._icon_btn_round {
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+._bottom-fix {
+    position: fixed;
+    bottom: 10%;
+    right: 1%;
+    border: none;
+    box-shadow: 0 0 10px;
+}
+
+._icon_btn_min {
+    min-height: 40px;
+}
