@@ -4,7 +4,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     include '_dbconn.php';
 
-    $user = $_POST['username'];
+    $user_name = $_POST['username'];
+    $user_email = $_POST['user_email'];
     $pass = $_POST['password'];
     $cpass = $_POST['cpassword'];
 
@@ -14,22 +15,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $alert = "false";
 
 
-    if ($user == "" or $pass == "" or $cpass == "") {
+    if ($user_name == "" or $pass == "" or $cpass == "" or $user_email == "") {
         $alert = "null";
         header("location: /projects/websites/idiscuss/index.php?signup=$singup&alert=$alert");
     } else {
         if ($pass == $cpass) {
 
-            $sql = "SELECT * FROM `users` WHERE `user_id` = '$user'";
+            $sql = "SELECT * FROM `users` WHERE `user_email` = '$user_email'";
             $result = mysqli_query($conn, $sql);
             $Exist = mysqli_num_rows($result);
+
 
             if ($Exist > 0) {
                 $alert = "exist";
                 header("location: /projects/websites/idiscuss/index.php?signup=$singup&alert=$alert");
             } else {
 
-                $sql = "INSERT INTO `users` (`user_id`, `password`) VALUES ( '$user', '$hash');";
+                $time_stamp = date('l jS \of F Y h:i:s A');
+                $sql = "INSERT INTO `users` (`user_name`,`user_email`, `password`,`time_stamp`) VALUES ( '$user_name','$user_email', '$hash','$time_stamp');";
                 $result = mysqli_query($conn, $sql);
 
                 if ($result) {

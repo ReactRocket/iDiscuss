@@ -12,16 +12,19 @@
 <body>
     <?php
 
-    echo '<div class="container p-5"><div class="alert alert-danger" role="alert">
+    echo '<div class="container p-5">
+    <div class="alert alert-danger" role="alert">
         <h4 class="alert-heading">404- Page Not Found </h4>
 
         <hr>
-        </div></div>';
+    <button class="btn btn-primary"><a class="text" href="index.php">Refresh</a></button>
+        
+        </div>
+        </div>';
     ?>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

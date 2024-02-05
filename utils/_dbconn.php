@@ -3,12 +3,10 @@
 $server = "localhost";
 $username = "root";
 $password = "";
-$database = "idiscuss";
+$database = "idiscusss";
 
-$conn =mysqli_connect($server,$username,$password,$database);
+$conn = mysqli_connect($server, $username, $password, $database);
 
 if (!$conn) {
-    header("location: utils/_404_page.php");
+    header("location: index.php");
 }
-
-?>

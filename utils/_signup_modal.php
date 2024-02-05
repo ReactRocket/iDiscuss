@@ -10,7 +10,11 @@
                 <form action="utils/_handlesignup.php" method="POST">
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input type="email" class="form-control" id="username" aria-describedby="emailHelp" name="username" placeholder="Enter Username" />
+                        <input type="text" class="form-control" id="username" aria-describedby="textHelp" name="username" placeholder="Enter Username" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="user_email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="user_email" aria-describedby="emailHelp" name="user_email" placeholder="Enter Email Address" />
                         <div id="emailHelp" class="form-text">
                             We'll never share your email with anyone else.
                         </div>

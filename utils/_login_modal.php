@@ -9,8 +9,8 @@
             <div class="modal-body">
                 <form action="utils/_handlesignin.php" method="POST">
                     <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="email" class="form-control" id="username" aria-describedby="emailHelp" name="username" placeholder="Enter Email Address As Username" />
+                        <label for="user_email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="user_email" aria-describedby="textHelp" name="user_email" placeholder="Enter Email Address" />
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
